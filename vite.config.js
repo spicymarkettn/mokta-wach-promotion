@@ -1,4 +1,3 @@
-base: '/mokta-wach-promotion/',
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 
