@@ -1,0 +1,5 @@
+{
+  "name": "MOKTA WACH Promotion",
+  "description": "A promotional spin-the-wheel application for MOKTA WACH. Users enter their details, spin a wheel to win a discount, and receive a QR code to redeem their prize.",
+  "requestFramePermissions": []
+}
