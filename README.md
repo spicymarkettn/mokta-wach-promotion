@@ -35,9 +35,11 @@ A promotional web application for MOKTA WACH that allows users to spin a wheel a
    http://localhost:5173
    ```
 
-## Uploading to GitHub
+## Hosting on GitHub Pages
 
-To upload this project to GitHub, follow these steps:
+This project is configured to be hosted on GitHub Pages. Follow these steps to upload and deploy your app:
+
+### 1. Upload to GitHub
 
 1. Install Git from [git-scm.com](https://git-scm.com/downloads)
 
@@ -78,4 +80,33 @@ To upload this project to GitHub, follow these steps:
    ```
    (or `git push -u origin main` depending on your default branch name)
 
-9. Refresh your GitHub repository page to see your uploaded code
+### 2. Deploy to GitHub Pages
+
+1. Go to your GitHub repository
+
+2. Click on "Settings" tab
+
+3. In the left sidebar, click on "Pages"
+
+4. Under "Build and deployment" section:
+   - Source: Select "GitHub Actions"
+   - You should see a suggestion for a workflow based on your project type
+   - Click on "Configure" for the suggested workflow
+
+5. The workflow file is already included in your repository (`.github/workflows/deploy.yml`), so GitHub will use it automatically
+
+6. Wait for the GitHub Actions workflow to complete (this may take a few minutes)
+
+7. Once deployed, your site will be available at:
+   ```
+   https://USERNAME.github.io/mokta-wach-promotion/
+   ```
+   (replace USERNAME with your GitHub username)
+
+### Important Notes
+
+- The `vite.config.js` file has been configured with a base path for GitHub Pages. If your repository name is different from "mokta-wach-promotion", you'll need to update the `base` property in the config file.
+
+- The app includes special routing for GitHub Pages to handle client-side routing in single-page applications.
+
+- If you make changes to your code, simply commit and push them to GitHub. The GitHub Actions workflow will automatically rebuild and redeploy your site.
